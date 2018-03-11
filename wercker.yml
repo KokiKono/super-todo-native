@@ -24,6 +24,11 @@ build:
   steps:
     # A step that executes `npm install` command
     - npm-install
+    # A step build executes `npm run build` command
+    - script:
+      name: typescript build
+      code: |
+        npm run build
     # A step that executes `eslint` command
     - script:
       name: lintチェック
